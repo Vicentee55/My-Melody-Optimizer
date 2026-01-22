@@ -39,7 +39,7 @@ set ha=[38;5;203m
 
 :menu
 mode 151,43
-title Paradise My melody Optimizer by zWhitezinn55 and Memphis
+title My Melody Optimizer - White and Memphis
 cls
 echo.
 echo.
@@ -60,21 +60,24 @@ echo.
 echo                 %mml%=========================================================================================================================                                                                                                                           
 echo.
 echo.
-echo                            %w%Este programa oferece opções de otimização para melhorar o desempenho dos seus jogos e do seu sistema.
-echo                          %mml%Aviso%w% : Crie Ponto De Restauracao / Não use caso tenha conta Microsoft Logada ou Pin no computador 
+echo                          %w%Este programa oferece opções de otimização para melhorar o desempenho dos seus jogos e do seu sistema.
+echo.
+echo                          %mml%Aviso%w% : Crie Ponto De Restauracao / Não use caso tenha conta Microsoft Logada
+echo                          ou Pin no computador
+echo.
+echo                          %mml%Aviso%w% É proibida a cópia, redistribuição ou modificação sem autorização dos criadores.
+echo                          O uso indevido poderá resultar em medidas legais.
 echo.
 echo.                                                                                                                          
 echo.
 echo.
-echo                             %mml%[%w% 1 %mml%]%w% Executar os tweaks                                      %mml%[%w% 2 %mml%]%w% Discord
-echo                             %mml%[%w% 3 %mml%]%w% Conheça os criadores                                    %mml%[%w% 4 %mml%]%w% Sair  
+echo                             %mml%[%w% 1 %mml%]%w% Executar os tweaks                                      %mml%[%w% 2 %mml%]%w% Saiba Mais
 echo.
 
 set /p Comando=:
 if "%Comando%" equ "1" (goto:op1)
 if "%Comando%" equ "2" (goto:op2)
-if "%Comando%" equ "3" (goto:op3)
-if "%Comando%" equ "4" (goto:op4)
+
 
 :op1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "CoalescingTimerInterval" /t REG_DWORD /d "0" /f
@@ -116,15 +119,4 @@ reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\GameBar" /v "AutoGameModeEnabled" 
 call :menu
 
 :op2
-start https://discord.gg/Z9UpJUbUzk
-
-:op3
-echo msgbox "Saiba mais sobre o nosso trabalho ", vbinformation, "Paradise Optimizer Social" > %temp%\mensagem1.vbs
-start %temp%\mensagem1.vbs
-timeout /t 3 /nobreak > nul
-start https://kzwhitezinn.github.io/55/
-start https://memphis-ctrl.github.io/
-call :menu
-
-:op4
-exit
+start https://kawevicente.netlify.app/
